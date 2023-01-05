@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:focusableInTouchMode="true"
+    tools:context=".ProfileActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor= "@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_marginTop="55dp"
+    android:scrollbars="vertical"
+    android:background="@drawable/centre_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:src="@drawable/enquiry_bk"
+        android:layout_marginLeft="200dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Permission \n Form !"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/roundedcorner"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="Select Reason Type !"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:padding="2dp"
+            android:id="@+id/spinner"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="Select From Date !"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/day"
+                android:layout_marginTop="10dp"
+                android:hint="Day"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                />
+
+            <EditText
+                android:id="@+id/month"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="Month"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                />
+
+            <EditText
+                android:id="@+id/year"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="Year"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="No of Days !"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/noOfDays"
+            android:padding="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="Detailed Reason !"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/detailreason"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="Add Proof!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/choose"
+                android:text="choose"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/chosenText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="6dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="File Name!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:background="@drawable/centre_button"
+            android:layout_marginTop="15dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>
+
+
+
+</RelativeLayout>

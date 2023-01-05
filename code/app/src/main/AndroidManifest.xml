@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustResize|adjustPan">
+        <activity android:name=".ReportList"></activity>
+        <activity android:name=".ScheduleFire" />
+        <activity android:name=".PushNotificationExample" />
+        <activity android:name=".AdminNotificationDetailed" />
+        <activity android:name=".Reports" />
+        <activity android:name=".NotificationAdmin" />
+        <activity android:name=".UserNotificationDetailed" />
+        <activity android:name=".PasswordChange" />
+        <activity android:name=".StudentList" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".Notifications" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".OTP" />
+        <activity
+            android:name=".SignupActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FCMMessageReceiverService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".MyAlarm"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

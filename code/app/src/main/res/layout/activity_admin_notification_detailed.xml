@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@drawable/centre_background"
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminNotificationDetailed">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:background="#fdaf45"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:background="@drawable/ic_left_black_24dp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/name"
+            android:layout_toRightOf="@id/back"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:text="Message From"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/roundedcorner"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="Reason Type !"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:padding="2dp"
+                android:id="@+id/reasonSubjetc"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="From Date !"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/date"
+                    android:hint="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    />
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="No of Days !"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/noOfDays"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="Detailed Reason !"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/detailreason"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="Add Proof!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/chosenText"
+                    android:layout_marginTop="6dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="File Name!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:padding="10dp"
+                    android:id="@+id/accept"
+                    android:textColor="@color/white"
+                    android:text="Accept"
+                    android:layout_gravity="left"
+                    android:background="@color/green"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <Button
+                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/decline"
+                    android:textColor="@color/white"
+                    android:text="Decline"
+                    android:layout_toRightOf="@+id/accept"
+                    android:background="@color/red"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/message"
+                android:visibility="invisible"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/decline"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    </ScrollView>
